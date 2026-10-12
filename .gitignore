@@ -4,8 +4,8 @@
 /tmp/
 /coverage/
 /e2e/test-output/
-/.angular/
-.angular/
+/.next/
+.next/
 
 # Node modules and dependency files
 /node_modules/
