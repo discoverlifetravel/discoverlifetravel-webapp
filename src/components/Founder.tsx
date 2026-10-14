@@ -9,14 +9,14 @@ export default function Founder() {
       <div className="wrap founder">
         <Reveal variant="left" className="imgrev">
           <figure className="pf" style={{ margin: 8 }}>
-            <Image src="/images/founder.jpg" alt="Catherine Frith, founder of Discover Life Travel" width={900} height={1068} sizes="220px" />
+            <Image src="/images/founder.jpg" alt="Catherine Frith, founder of Discover Life Travel" width={900} height={1068} sizes="150px" />
           </figure>
         </Reveal>
         <Reveal variant="right">
           <div className="eyebrow l">Founder</div>
           <h2>Catherine Frith</h2>
           <p>For more than 30 years, Catherine has travelled beyond the obvious to discover the India that stays with you: its people, places, cultures and extraordinary hospitality.</p>
-          <a className="lnk" href="#enquire">Talk to Catherine &rarr;</a>
+          <a className="lnk" href="#enquire">Talk with Catherine &rarr;</a>
         </Reveal>
       </div>
     </section>

@@ -11,4 +11,14 @@ export default function Lockup({ label = 'Discover Life Travel home' }: { label?
       </span>
     </a>
   )
+
+  // return (
+  //   <a className="lock" href="/#top" aria-label={label}>
+  //     <span className="mk"><Image src="/logo-mark.png" alt="" width={283} height={333} unoptimized priority /></span>
+  //     <span className="lt">
+  //       <Image src="/logo-text.png" alt="Discover Life Travel" width={797} height={168} unoptimized priority />
+  //       <small>Founder-Led Journeys through India</small>
+  //     </span>
+  //   </a>
+  // )
 }

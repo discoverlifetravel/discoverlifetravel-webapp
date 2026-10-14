@@ -237,3 +237,66 @@ html,body{overflow-x:clip}
 @media (max-width:320px){.bar{gap:6px}.lock{gap:6px;min-width:0}.mk{width:34px;height:40px}.mk img{width:104px;margin:-3px 0 0 -32px}.lock b{font-size:.78rem!important;letter-spacing:.06em!important}.lock em{font-size:.7rem;letter-spacing:.22em;gap:4px}.lock em::before,.lock em::after{width:8px}.lock small{display:none}.burger{padding:9px 10px;min-height:44px}.btn{white-space:normal;text-align:center}}
 
 @media (max-width:380px){.lock em{font-size:.78rem!important}}
+
+/* ===== main menu v2: animated underline, active section, sliding mobile panel ===== */
+@keyframes menuDot{0%{box-shadow:0 0 0 0 rgba(166,119,23,.55)}100%{box-shadow:0 0 0 8px rgba(166,119,23,0)}}
+header.nav{transition:box-shadow .4s,background .4s}
+header.nav.scrolled{box-shadow:0 10px 30px rgba(120,85,15,.14)}
+.bar{max-width:1440px;transition:height .35s}
+nav#menu{gap:4px 22px}
+nav#menu a:not(.btn){position:relative;font:700 .8rem/1.25 var(--serif);letter-spacing:.08em;text-align:center;white-space:normal;max-width:11.2rem;padding:8px 0;border:0;color:var(--ink)}
+nav#menu a:not(.btn)::after{content:'';position:absolute;left:0;right:0;bottom:1px;height:2px;background:linear-gradient(90deg,#8f6612,#e8c96b);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+nav#menu a:not(.btn):hover,nav#menu a.on{color:var(--gold-d);border:0}
+nav#menu a:not(.btn):hover::after,nav#menu a.on::after{transform:scaleX(1)}
+nav#menu a[href='/spirit-of-south-india'] span::before{content:'';display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:var(--gold);vertical-align:middle;animation:menuDot 2.4s ease-out infinite}
+nav#menu .btn{position:relative;overflow:hidden;padding:13px 22px;font-size:.8rem;transition:background .3s,color .3s,transform .35s,box-shadow .35s}
+nav#menu .btn::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s}
+nav#menu .btn:hover{transform:translateY(-2px)}nav#menu .btn:hover::after{left:120%}
+.burger{align-items:center;gap:12px}
+.burger .bg{position:relative;display:inline-block;width:18px;height:12px}
+.burger .bg i{position:absolute;left:0;right:0;height:2px;background:var(--ink);transition:transform .35s,opacity .25s,top .35s}
+.burger .bg i:nth-child(1){top:0}.burger .bg i:nth-child(2){top:5px}.burger .bg i:nth-child(3){top:10px}
+header.is-open .burger .bg i:nth-child(1){top:5px;transform:rotate(45deg)}
+header.is-open .burger .bg i:nth-child(2){opacity:0}
+header.is-open .burger .bg i:nth-child(3){top:5px;transform:rotate(-45deg)}
+@media (max-width:1439px){
+.burger{display:inline-flex}
+nav#menu{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px max(28px,env(safe-area-inset-right)) 24px max(28px,env(safe-area-inset-left));background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 24px 40px rgba(120,85,15,.16);max-height:calc(100vh - 88px);max-height:calc(100dvh - 88px);overflow-y:auto;visibility:hidden;opacity:0;transform:translateY(-12px);pointer-events:none;transition:opacity .3s,transform .4s cubic-bezier(.2,.7,.2,1),visibility 0s .4s}
+nav#menu.open{visibility:visible;opacity:1;transform:none;pointer-events:auto;transition-delay:0s}
+nav#menu a:not(.btn){text-align:left;max-width:none;padding:15px 0!important;border-bottom:1px solid var(--line);font-size:.92rem;letter-spacing:.1em;opacity:0;transform:translateX(-14px);transition:opacity .2s,transform .2s,color .3s}
+nav#menu a:not(.btn)::after{bottom:-1px}
+nav#menu.open a:not(.btn){opacity:1;transform:none;transition:opacity .4s calc(var(--i) * 55ms + 80ms),transform .5s cubic-bezier(.2,.7,.2,1) calc(var(--i) * 55ms + 80ms),color .3s}
+nav#menu .btn{justify-content:center;margin-top:16px;padding:15px 22px;font-size:.88rem;opacity:0;transform:translateY(10px)}
+nav#menu.open .btn{opacity:1;transform:none;transition:opacity .4s calc(var(--i) * 55ms + 80ms),transform .5s cubic-bezier(.2,.7,.2,1) calc(var(--i) * 55ms + 80ms),background .3s,color .3s}
+}
+@media (prefers-reduced-motion:reduce){nav#menu,nav#menu a,nav#menu .btn,.burger .bg i,.bar{transition:none!important}nav#menu a span::before{animation:none!important}}
+
+/* ===== founder photo: whole picture, same frame and height ===== */
+.pf{position:relative;display:block;width:fit-content;height:176px;outline:1px solid var(--gold-l);outline-offset:8px;background:none}
+.pf img{display:block;width:auto;height:176px;aspect-ratio:900/1068;object-fit:contain;outline:0}
+@media (max-width:480px){.pf,.pf img{height:144px}.pf img{width:auto}}
+
+/* very small screens (Galaxy Fold folded etc.) */
+@media (max-width:320px){
+  .pill div,.strip div{padding:6px 8px}
+  .pill h3,.strip h3{font-size:1.2rem}
+}
+
+/* ===== main menu: keep the approved sans typography (Montserrat, spaced capitals) ===== */
+nav#menu{gap:6px 26px}
+nav#menu a:not(.btn){font:500 .74rem var(--sans);letter-spacing:.14em;white-space:nowrap;max-width:none;padding:8px 0;color:var(--ink)}
+nav#menu .btn{font:600 .72rem var(--sans);letter-spacing:.12em}
+@media (max-width:1439px){nav#menu a:not(.btn){font-size:.8rem;letter-spacing:.14em;white-space:normal}nav#menu .btn{font-size:.78rem}}
+
+/* ===== logo lockup: original logo artwork + live tagline ===== */
+.lock{gap:14px;align-items:center}
+.mk{width:56px;height:66px;overflow:visible;flex:none}.mk img{display:block;width:100%;height:100%;max-width:none;margin:0;mix-blend-mode:normal}
+.lt{display:block;width:300px;flex:none;text-align:center}.lt img{display:block;width:100%;height:auto}
+.lt small{display:block;margin-top:6px;font:500 8.8px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+@media (max-width:640px){.lock{gap:9px}.mk{width:38px;height:45px}.lt{width:178px}.lt small{display:none}}
+@media (max-width:340px){.lock{gap:6px}.mk{width:30px;height:35px}.lt{width:138px}}
+
+/* ===== justified paragraph text (home page: long paragraphs; short centred captions stay centred) ===== */
+.founder p,.enq p,.enq .fine,details p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+@media (max-width:480px){.founder p,.enq p,.enq .fine,details p{text-align:left;hyphens:manual}}
+

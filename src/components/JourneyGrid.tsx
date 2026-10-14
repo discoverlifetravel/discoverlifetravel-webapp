@@ -11,7 +11,7 @@ export default function JourneyGrid() {
     <>
       <Reveal className="cards stg">
         {list.map((j) => (
-          <a key={j.title} className="jc" href="#enquire">
+          <a key={j.title} className="jc" href={j.href ?? '#enquire'}>
             <div className="im">
               {j.img ? (
                 <Image src={j.img} alt={j.title} width={j.w!} height={j.h!} sizes="(max-width:640px) 100vw, (max-width:1020px) 50vw, 380px" />

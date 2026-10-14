@@ -3,11 +3,11 @@ import type { ReactNode } from 'react'
 import { Bodoni_Moda, Cormorant_Garamond, Cormorant_SC, Cinzel, Montserrat } from 'next/font/google'
 import './globals.css'
 
-const bod = Bodoni_Moda({ subsets: ['latin'], style: ['normal', 'italic'], variable: '--font-bod', display: 'swap' })
-const serif = Cormorant_Garamond({ subsets: ['latin'], weight: ['500', '600', '700'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' })
-const sc = Cormorant_SC({ subsets: ['latin'], weight: ['500', '600'], variable: '--font-sc', display: 'swap' })
+const bod = Bodoni_Moda({ subsets: ['latin'], weight: ['400', '500'], style: ['normal', 'italic'], variable: '--font-bod', display: 'swap' })
+const serif = Cormorant_Garamond({ subsets: ['latin'], weight: ['500'], style: ['normal', 'italic'], variable: '--font-serif', display: 'swap' })
+const sc = Cormorant_SC({ subsets: ['latin'], weight: ['500'], variable: '--font-sc', display: 'swap' })
 const disp = Cinzel({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-disp', display: 'swap' })
-const sans = Montserrat({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-sans', display: 'swap' })
+const sans = Montserrat({ subsets: ['latin'], weight: ['500', '600'], variable: '--font-sans', display: 'swap' })
 
 const title = 'Discover Life Travel | India, beyond the itinerary'
 const description =

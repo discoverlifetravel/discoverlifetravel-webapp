@@ -9,7 +9,7 @@ const interests = [
   'Ancient Encounters India', 'Arc of the East India Tour', 'Mother Masala Tours', 'A fully bespoke journey',
 ]
 
-export default function Enquiry() {
+export default function Enquiry({ defaultInterest }: { defaultInterest?: string } = {}) {
   const router = useRouter()
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -56,7 +56,7 @@ export default function Enquiry() {
             </div>
             <div>
               <label htmlFor="i">Journey of interest</label>
-              <select id="i" name="interest">
+              <select id="i" name="interest" defaultValue={defaultInterest}>
                 {interests.map((x) => <option key={x}>{x}</option>)}
               </select>
             </div>

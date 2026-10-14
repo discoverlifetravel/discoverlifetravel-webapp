@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="ft">
           <Lockup label="Discover Life Travel" />
           <nav aria-label="Footer">
-            <a href="#tours">Journeys</a><a href="#why">Why Us</a><a href="#founder">Catherine</a><a href="#stories">Guest Stories</a><a href="#enquire">Contact</a>
+            <a href="/#tours">Journeys</a><a href="/#why">Why We Are Different</a><a href="/#founder">Founder</a><a href="/#stories">Guest Stories</a><a href="#enquire">Contact</a>
           </nav>
           <div className="soc">
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.3" cy="6.7" r=".6" /></svg></a>
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="fb">
-          <span className="cp">&copy; {new Date().getFullYear()} Discover Life Travel. All rights reserved.</span>
+          <span className="cp">&copy; {new Date().getFullYear()} Discover Life Travel. All rights reserved.<br />ABN 62 004 927 830 &middot; 36 Grange Rd, Alphington VIC 3078 &middot; <a href="tel:+61409905612">+61 409 905 612</a></span>
           <div className="fm">
             <span className="lt"><Lotus /></span>
             <span className="fw"><i />Journeys &bull; People &bull; Places &bull; A Deeper India<i /></span>

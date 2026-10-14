@@ -23,7 +23,7 @@ export default function Flagship() {
           <div className="sep"><Lotus /></div>
           <p className="states">Karnataka<b>|</b>Tamil Nadu<b>|</b>Kerala</p>
           <p className="tag2">A Journey that Stays with You.</p>
-          <a className="btn" href="#enquire">Enquire about this journey &rarr;</a>
+          <a className="btn" href="/spirit-of-south-india">Explore this journey &rarr;</a>
         </Reveal>
       </div>
       <div className="feat">

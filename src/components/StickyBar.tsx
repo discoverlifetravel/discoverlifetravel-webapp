@@ -11,8 +11,8 @@ export default function StickyBar() {
   }, [])
   return (
     <div className={`sticky${show ? ' show' : ''}`}>
-      <a className="btn line" href="tel:1800000000">Call us</a>
-      <a className="btn" href="#enquire">Talk to Catherine</a>
+      <a className="btn line" href="tel:+61409905612">Call us</a>
+      <a className="btn" href="#enquire">Talk with Catherine</a>
     </div>
   )
 }

@@ -9,7 +9,7 @@ export default function Band() {
       <Reveal className="wrap">
         <h2>Your India. Your Way.</h2>
         <p>Private journeys and intimate small-group travel, thoughtfully designed around you.</p>
-        <a className="btn" href="#enquire">Talk to Catherine &rarr;</a>
+        <a className="btn" href="#enquire">Talk with Catherine &rarr;</a>
       </Reveal>
     </section>
   )
